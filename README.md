@@ -46,3 +46,17 @@ Aplicação de lista de tarefas desenvolvido com **PHP**, **Laravel** e **MySQL*
     ```
     php artisan make:controller TaskController --resource --model=NomeDoModelo
     ```
+
+* Fase 4 (Front End):
+    * Criar views em "app/resources/views":
+    ```
+    nome_da_view.blade.php
+    ```
+    * Teste:
+    ```
+    php artisan serve
+    ```
+    * Teste completo:
+    ```
+    php artisan config:clear && php artisan cache:clear && php artisan optimize && php artisan route:clear && php artisan serve
+    ```
