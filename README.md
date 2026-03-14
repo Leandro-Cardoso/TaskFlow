@@ -4,7 +4,7 @@
 
 Aplicação de lista de tarefas desenvolvido com **PHP**, **Laravel** e **MySQL** para a disciplina de Laboratório de Programação **Full Stack** do curso de **Engenharia de Software** da Univassouras.
 
-## Passos:
+## Passos
 
 * Fase 1 (instalações):
     * Instalação do Laragon.
@@ -60,3 +60,34 @@ Aplicação de lista de tarefas desenvolvido com **PHP**, **Laravel** e **MySQL*
     ```
     php artisan config:clear && php artisan cache:clear && php artisan optimize && php artisan route:clear && php artisan serve
     ```
+
+# Clone
+
+* Clonar repositório:
+```
+git clone https://github.com/Leandro-Cardoso/TaskFlow
+```
+* Instalar dependencias:
+```
+composer install
+```
+* Se necessario atualizar:
+```
+composer update
+```
+* Se necessario migrar banco de dados:
+```
+php artisan migrate
+```
+* Gerar chave:
+```
+php artisan key:generate
+```
+* Teste:
+```
+php artisan serve
+```
+* Teste completo:
+```
+php artisan config:clear && php artisan cache:clear && php artisan optimize && php artisan route:clear && php artisan serve
+```
