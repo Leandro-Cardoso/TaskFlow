@@ -9,4 +9,7 @@ Route::get('/', function () {
 });
 
 # Busca tarefas:
-Route::get('/tasks/', [TaskController::class, 'index']);
+Route::get('/tasks/', [TaskController::class, 'index'])->name('tasks.index');
+
+# Nova tarefa:
+Route::get('/tasks/create', [TaskController::class, 'create'])->name('tasks.create');

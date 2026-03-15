@@ -9,7 +9,7 @@
     
     <h1>TaskFlow</h1>
 
-    <a href="/tasks">Lista de Tarefas</a>
+    <a href="{{ route('tasks.index') }}">Lista de Tarefas</a>
 
 </body>
 </html>

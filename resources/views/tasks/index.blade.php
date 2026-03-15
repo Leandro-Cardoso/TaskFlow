@@ -3,6 +3,7 @@
 <head>
     <title>TaskFlow</title>
     <style>
+        /* Base */
         body {
             background: #000;
 
@@ -17,12 +18,32 @@
             text-transform: uppercase;
             color: #ffc400;
         }
+        nav {
+            text-align: center;
+        }
+        /* Botão */
+        .btn {
+            display: inline-block;
+            background: #ffc400;
+            color: #000;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background: #e67b00;
+        }
+        /* Card */
         .card {
             background: #121212;
             
             padding: 20px;
             border-radius: 10px;
         }
+        /* Lista */
         ul {
             list-style: none;
             padding: 0;
@@ -44,6 +65,12 @@
     <div class="card">
 
         <h1>Lista de Tarefas</h1>
+
+        <nav>
+            <a href="{{ route('tasks.create') }}" class="btn">
+                Nova Tarefa
+            </a>
+        </nav>
 
         <ul>
             @forelse ($tasks as $task)
