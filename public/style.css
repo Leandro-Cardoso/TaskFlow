@@ -13,6 +13,10 @@ h1 {
     text-transform: uppercase;
     color: #ffc400;
 }
+strong {
+    color: #ffc400;
+    font-weight: bolder;
+}
 nav {
     display: flex;
     justify-content: center;
@@ -56,9 +60,14 @@ li {
 }
 .status {
     font-size: 0.8em;
+    color: #121212;
     padding: 2px 6px;
     border-radius: 4px;
     background: #ddd;
+}
+.description {
+    font-size: 0.8em;
+    margin-left: 1em;
 }
 
 /* Formulario */

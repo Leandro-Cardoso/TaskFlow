@@ -24,7 +24,7 @@
                 <li>
                     <strong>{{ $task->title }}</strong> 
                     <span class="status">{{ $task->status }}</span>
-                    <p>{{ $task->description }}</p>
+                    <p class="description">{{ $task->description }}</p>
                 </li>
             @empty
                 <li>Nenhuma tarefa encontrada no banco.</li>
