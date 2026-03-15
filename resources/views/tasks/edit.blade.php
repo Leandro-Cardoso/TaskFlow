@@ -8,7 +8,7 @@
 
     <div class="card">
 
-        <h1>Nova Tarefa</h1>
+        <h1>Editar Tarefa</h1>
 
         <!-- Navegação -->
         <nav>
@@ -18,31 +18,36 @@
         </nav>
 
         <!-- Formulário -->
-        <form action="{{ route('tasks.store') }}" method="POST">
+        <form action="{{ route('tasks.update', $task) }}" method="POST">
 
             @csrf
+            @method('PUT')
             
             <div class="form-group">
                 <label for="title">Título</label>
-                <input type="text" name="title" id="title" placeholder="Ex: Estudar" required>
+                <input type="text" name="title" id="title" placeholder="Ex: Estudar" value="{{ $task->title }}" required>
             </div>
 
             <div class="form-group">
                 <label for="description">Descrição</label>
-                <textarea name="description" id="description" rows="4" placeholder="O que precisa ser feito?"></textarea>
+                <textarea name="description" id="description" rows="4" placeholder="O que precisa ser feito?">{{ $task->description }}</textarea>
             </div>
 
             <div class="form-group">
                 <label for="status">Status Inicial</label>
                 <select name="status" id="status">
-                    <option value="pendente">Pendente</option>
-                    <option value="concluida">Concluída</option>
+                    <option value="pendente" @selected($task->status == 'pendente')>
+                        Pendente
+                    </option>
+                    <option value="concluida" @selected($task->status == 'concluida')>
+                        Concluída
+                    </option>
                 </select>
             </div>
 
             <nav>
                 <button type="submit" class="btn">
-                    Salvar
+                    Alterar
                 </button>
             </nav>
 

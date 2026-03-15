@@ -53,10 +53,15 @@ nav {
 ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
 }
 li {
     border-bottom: 1px solid #eee;
     padding: 10px 0;
+    display: flex;
+    gap: 2em;
 }
 .status {
     font-size: 0.8em;

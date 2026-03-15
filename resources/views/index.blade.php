@@ -10,6 +10,7 @@
     
     <h1>TaskFlow</h1>
 
+    <!-- Navegação -->
     <nav>
         <a href="{{ route('tasks.index') }}" class="btn">
             Lista de Tarefas
