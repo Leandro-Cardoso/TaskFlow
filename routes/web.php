@@ -18,3 +18,6 @@ Route::post('/tasks', [TaskController::class, 'store'])->name('tasks.store');
 # Editar tarefa:
 Route::get('/tasks/{task}/edit', [TaskController::class, 'edit'])->name('tasks.edit');
 Route::put('/tasks/{task}', [TaskController::class, 'update'])->name('tasks.update');
+
+# Apagar tarefa:
+Route::delete('/tasks/{task}', [TaskController::class, 'destroy'])->name('tasks.destroy');

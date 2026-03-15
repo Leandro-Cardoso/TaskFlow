@@ -33,9 +33,16 @@
                     
                     <!-- Ações -->
                     <div class="task-actions">
-                        <a href="{{ route('tasks.edit', $task->id) }}" class="btn">
+                        <a href="{{ route('tasks.edit', $task) }}" class="btn">
                             Editar
                         </a>
+                        <form action="{{ route('tasks.destroy', $task) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn" onclick="return confirm('Tem certeza que deseja apagar?')">
+                                Apagar
+                            </button>
+                        </form>
                     </div>
                 </li>
             @empty

@@ -74,6 +74,10 @@ li {
     font-size: 0.8em;
     margin-left: 1em;
 }
+.task-actions {
+    display: flex;
+    gap: 1em;
+}
 
 /* Formulario */
 .form-group {
