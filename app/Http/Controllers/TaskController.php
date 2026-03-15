@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Task;
 use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
 
 class TaskController extends Controller
@@ -14,6 +15,7 @@ class TaskController extends Controller
     public function index(): View
     {
         $tasks = Task::all();
+
         return view(
             'tasks.index',
             compact('tasks')
@@ -31,9 +33,16 @@ class TaskController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
-        //
+        $request->validate([
+            'title' => 'required|max:255',
+            'status' => 'required|in:pendente,concluida',
+        ]);
+
+        Task::create($request->all());
+
+        return redirect()->route('tasks.index');
     }
 
     /**

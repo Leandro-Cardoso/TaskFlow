@@ -14,7 +14,9 @@ h1 {
     color: #ffc400;
 }
 nav {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
 }
 
 /* Botão */
@@ -26,7 +28,9 @@ nav {
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
+    font-size: 1em;
     margin-bottom: 20px;
+    border: 0;
     transition: all 0.3s;
 }
 .btn:hover {
@@ -55,4 +59,30 @@ li {
     padding: 2px 6px;
     border-radius: 4px;
     background: #ddd;
+}
+
+/* Formulario */
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffc400;
+    font-weight: bold;
+}
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: #fff;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 1em;
+}
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #ffc400;
 }

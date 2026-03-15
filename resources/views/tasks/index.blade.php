@@ -11,6 +11,9 @@
         <h1>Lista de Tarefas</h1>
 
         <nav>
+            <a href="{{ route('index') }}" class="btn">
+                Voltar
+            </a>
             <a href="{{ route('tasks.create') }}" class="btn">
                 Nova Tarefa
             </a>
