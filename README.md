@@ -36,6 +36,10 @@ Aplicação de lista de tarefas desenvolvido com **PHP**, **Laravel** e **MySQL*
     ```
     php artisan migrate
     ```
+    * Criar as tabela manualmente depois de criar o arquivo em "database/sql/create_NOME_DA_TABELA.sql":
+    ```
+    mysql -u NOME_DE_USUARIO_DO_BANCO -p < database/sql/create_NOME_DA_TABELA.sql
+    ```
     * Caso as tabela sejam criadas manualmente:
     ```
     php artisan key:generate
@@ -61,7 +65,7 @@ Aplicação de lista de tarefas desenvolvido com **PHP**, **Laravel** e **MySQL*
     php artisan config:clear && php artisan cache:clear && php artisan optimize && php artisan route:clear && php artisan serve
     ```
 
-# Clone
+## Clone
 
 * Clonar repositório:
 ```
