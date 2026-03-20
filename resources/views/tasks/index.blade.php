@@ -43,6 +43,13 @@
                                 Apagar
                             </button>
                         </form>
+                        <form action="{{ route('tasks.complete', $task) }}" method="POST">
+                            @csrf
+                            @method('PUT')
+                            <button type="submit" class="btn">
+                                Completar
+                            </button>
+                        </form>
                     </div>
                 </li>
             @empty

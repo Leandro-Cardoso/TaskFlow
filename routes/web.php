@@ -21,3 +21,6 @@ Route::put('/tasks/{task}', [TaskController::class, 'update'])->name('tasks.upda
 
 # Apagar tarefa:
 Route::delete('/tasks/{task}', [TaskController::class, 'destroy'])->name('tasks.destroy');
+
+# Concluir tarefa:
+Route::put('/tasks/{task}/complete', [TaskController::class, 'complete'])->name('tasks.complete');

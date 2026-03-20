@@ -85,4 +85,16 @@ class TaskController extends Controller
 
         return redirect()->route('tasks.index');
     }
+
+    /**
+     * Update "status" to "concluida".
+     */
+    public function complete(Task $task)
+    {
+        $task->update([
+            'status' => 'concluida'
+        ]);
+
+        return redirect()->route('tasks.index');
+    }
 }
